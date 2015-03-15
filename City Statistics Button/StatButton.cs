@@ -33,7 +33,7 @@ namespace SystemTimeClock
          * This is over-documented to hell.  As I'm starting out, I'm trying to break things down as much as possible,
          * mostly for my own benefit.  I tend to go cross-eyed going back and forth between code.
          * 
-         * Most of this mod is making the button., and I used the following method to create the button: 
+         * Most of this mod is making the button, and I used the following method to create the button: 
          * http://www.reddit.com/r/CitiesSkylinesModding/comments/2ymwxe/example_code_using_the_colossal_ui_in_a_user_mod/
          * So don't give me credit for that, kay? Kay.
          * 
@@ -57,7 +57,9 @@ namespace SystemTimeClock
             var uiView = GameObject.FindObjectOfType<UIView>();
             if (uiView == null) return;
 
-            //Define how big the button is!
+            // Define how big the button is!
+            // It's come to my attention that this may not display correctly in non-16:9 resolutions.
+            // I'll figure it out after I actually play video games for awhile.
 
             statButton.width = 125;
             statButton.height = 30;
