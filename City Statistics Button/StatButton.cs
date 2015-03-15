@@ -85,6 +85,8 @@ namespace SystemTimeClock
 
             // BringToFront does exactly what you'd expect. It's part of the ColossalFramework.UI.UIComponent class.
             // Without it, the button would end up behind the rest of the UI.
+            // Chances are when I go in to make sure buttons are displaying right at 16:10
+            // I'll have to do something with that.
 
             statButton.transformPosition = new Vector3(1.2f, -0.93f);
             statButton.BringToFront();
