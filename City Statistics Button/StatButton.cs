@@ -13,12 +13,36 @@ namespace SystemTimeClock
     {
         public string Name
         {
-            get { return "City Statistics Easy Access"; }
+            get {
+		    ColossalFramework.SavedString lang_setting = new ColossalFramework.SavedString("localeID", "gameSettings");
+		    switch (lang_setting.value) {
+			case "de":
+				return "Einfacher Zugang zu Stadt-Statistiken";
+			case "it":
+				return "Facile accesso alle statistische della città";
+			case "nl":
+				return "Eenvoudige toegang tot stadsstatistieken";
+			default:
+				return "City Statistics Easy Access";
+		    }
+	    }
         }
 
         public string Description
         {
-            get { return "Creates a button on the main UI for easier access to City Statistics"; }
+            get {
+		ColossalFramework.SavedString lang_setting = new ColossalFramework.SavedString("localeID", "gameSettings");
+		switch (lang_setting.value) {
+			case "de":
+				return "Bringt eine Knopf auf dem Spielschirm an für einfachen Zugang zum Stadtstatistiken";
+			case "it":
+				return "Creates a button on the main UI for easier access to City Statistics";
+			case "nl":
+				return "Plaatst een knop in het spelscherm voor eenvoudige toegang tot stadsstatistieken";
+			default:
+				return "Creates a button on the main UI for easier access to City Statistics";
+		}
+	    }
         }
     }
 
@@ -91,9 +115,40 @@ namespace SystemTimeClock
             statButton.transformPosition = new Vector3(1.2f, -0.93f);
             statButton.BringToFront();
 
+            ColossalFramework.SavedString lang_setting = new ColossalFramework.SavedString("localeID", "gameSettings");
             // Mmhm.  You know what this does.
-
-            statButton.text = "City Statistics";
+            switch (lang_setting.value) {
+		    case "bg":
+			    statButton.text = "Статистики за града";
+			    break;
+		    case "de":
+			    statButton.text = "Stadt-statistiken";
+			    break;
+		    case "es":
+			    statButton.text = "Estadísticas de la ciudad";
+			    break;
+		    case "fr":
+			    statButton.text = "Statistiques de la ville";
+			    break;
+		    case "it":
+			    statButton.text = "Statistiche della città";
+			    break;
+		    case "nl":
+			    statButton.text = "Stadsstatistieken";
+			    break;
+		    case "pl":
+			    statButton.text = "Statistiki miasta";
+			    break;
+		    case "pt":
+			    statButton.text = "Estatísicas da cidade";
+			    break;
+		    case "ru":
+			    statButton.text = "Показатели города";
+			    break;
+		    default:
+			    statButton.text = "City Statistics";
+			    break;
+            }
 
             // Points the button towards the logic needed for the button to do stuff.
 
